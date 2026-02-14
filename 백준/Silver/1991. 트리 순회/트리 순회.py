@@ -1,14 +1,9 @@
-from collections import deque
-
 n = int(input())
 childs = {}
-parents = {}
 
 for _ in range(n):
-  root, right, left = input().split()
-  childs[root] = (right, left)
-  parents[right] = root
-  parents[left] = root
+  root, left, right = input().split()
+  childs[root] = (left, right)
 
 a = []
 def dfs_a(node):
